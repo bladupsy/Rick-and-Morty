@@ -1,0 +1,10 @@
+<div class="container-content">
+  <div class="content-header">
+    <div class="brand">
+      <h3>Rick and Morty</h3>
+      <ul *ngFor="let items of itemsRoutes; let i in index">
+        <li (click)="getRoute(i)">{{items.title}}</li>
+      </ul>
+    </div>
+  </div>
+</div>

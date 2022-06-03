@@ -1,0 +1,16 @@
+
+<div>
+  <div class="container-search">
+    <div class="container__item">
+      <form class="form">
+        <input type="text" class="form__field" [(ngModel)]="searchCharacter" name="searchCharacter"  id="searchCharacter" (keyup.Space)="getSearch($event)" (keyup.enter)="getSearch($event)" />
+        <button type="button" class="btn btn--primary btn--inside uppercase" (click)="getSearchOfButton()">Search</button>
+      </form>
+    </div>
+  </div>
+  <div class="container">
+  <div *ngFor="let character of characters; let i in index" class="container-cards">
+    <app-card [image]="character.image" [title]="character.name" [species]="character.species" (click)="indexOfCharacters(i)"></app-card>
+  </div>
+</div>
+</div>
